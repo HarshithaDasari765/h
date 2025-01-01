@@ -21,6 +21,7 @@ pipeline {
 
 
 integrate kub and doc
+    1 install doc-enable kuber-verify insta-config kubectl-create kub dep file-apply dep-expose dep-get servicesurl-verify dep
 apiVersion: apps/v1
 kind: Deployment
 metadata:
