@@ -12,3 +12,19 @@
 
 </body>
 </html>
+
+
+
+public class Subtraction {
+    public static void main(String[] args) {
+        // Define two numbers
+        int number1 = 10;
+        int number2 = 5;
+
+        // Perform subtraction
+        int result = number1 - number2;
+
+        // Display the result
+        System.out.println("The result of subtraction is: " + result);
+    }
+}
