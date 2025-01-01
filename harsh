@@ -1,0 +1,206 @@
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~
+$ git config --global user.name "harshitha"
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~
+$ git config --global user.name "harshithadasari283@gmail.com"
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~
+$ mkdir 55
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~
+$ cd 55
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55
+$ git init
+Initialized empty Git repository in C:/Users/POOJITHA/55/.git/
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ ls
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ ls
+abc.txt  index  index.html
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git commit -m"added"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        abc.txt
+        index
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git add "index.html"
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git commit -m"add"
+[master (root-commit) 3a7965f] add
+ 1 file changed, 17 insertions(+)
+ create mode 100644 index.html
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git add "abc.txt"
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git commit -m"added"
+[master 965c543] added
+ 1 file changed, 12 insertions(+)
+ create mode 100644 abc.txt
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git log
+commit 965c543697b99b6969511bfc234944b3047e7a44 (HEAD -> master)
+Author: harshithadasari283@gmail.com <harshithadasari283@gmail.com>
+Date:   Wed Jan 1 21:53:48 2025 +0530
+
+    added
+
+commit 3a7965f812bda03b575dbee7e4fd1b27a1078d32
+Author: harshithadasari283@gmail.com <harshithadasari283@gmail.com>
+Date:   Wed Jan 1 21:53:25 2025 +0530
+
+    add
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git branch cse
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git checkout cse
+Switched to branch 'cse'
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (cse)
+$ ls
+abc.txt  index  index.html
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (cse)
+$ git init
+Reinitialized existing Git repository in C:/Users/POOJITHA/55/.git/
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (cse)
+$ git add"h.txt"
+git: 'addh.txt' is not a git command. See 'git --help'.
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (cse)
+$ git add "h.txt"
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (cse)
+$ git commit -m "a"
+[cse d6c1fd7] a
+ 1 file changed, 14 insertions(+)
+ create mode 100644 h.txt
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (cse)
+$ ls
+abc.txt  h.txt  index  index.html
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (cse)
+$ git checkout master
+Switched to branch 'master'
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git diff cse
+diff --git a/h.txt b/h.txt
+deleted file mode 100644
+index be40673..0000000
+--- a/h.txt
++++ /dev/null
+@@ -1,14 +0,0 @@
+-<!DOCTYPE html>
+-<html>
+-<head>
+-<title>Hello World!</title>
+-<link rel="stylesheet" href="navy.css">
+-</head>
+-<body>
+-
+-<h1>Hello world!</h1>
+-<p>bhojreddy engineering college</p>
+-<p>this is p</p>
+-
+-</body>
+-</html>
+\ No newline at end of file
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git merge cse
+Updating 965c543..d6c1fd7
+Fast-forward
+ h.txt | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+ create mode 100644 h.txt
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ ls
+abc.txt  h.txt  index  index.html
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git remote add origin https://github.com/HarshithaDasari765/h.git
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git push origin master
+info: please complete authentication in your browser...
+
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git remote add origin git@github.com:HarshithaDasari765/h.git
+error: remote origin already exists.
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git push origin master
+info: please complete authentication in your browser...
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 1.08 KiB | 1.08 MiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/HarshithaDasari765/h.git
+ * [new branch]      master -> master
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git fetch
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git pull origin master
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 1.97 KiB | 83.00 KiB/s, done.
+From https://github.com/HarshithaDasari765/h
+ * branch            master     -> FETCH_HEAD
+   d6c1fd7..a54994c  master     -> origin/master
+Updating d6c1fd7..a54994c
+Fast-forward
+ index.html |  4 ++--
+ p.txt      | 14 ++++++++++++++
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+ create mode 100644 p.txt
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ ls
+abc.txt  h.txt  index  index.html  p.txt
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$ git fetch
+fatal: unable to access 'https://github.com/HarshithaDasari765/h.git/': Could not resolve host: github.com
+
+POOJITHA@DESKTOP-AF96UCH MINGW64 ~/55 (master)
+$
