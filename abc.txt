@@ -10,3 +10,22 @@
 
 </body>
 </html>
+
+Step 3: Creating a Sample test File for con app using sel
+package Docker;
+import java.net.*;
+import org.openqa.selenium.firefox.*;
+import org.openqa.selenium.remote.*;
+public class Docker_Selenium {
+    public static void main(String[] args) {
+        try {
+        	FirefoxOptions options = new FirefoxOptions();
+            URL url = new URL("http://localhost:4444/wd/hub");
+            RemoteWebDriver driver = new RemoteWebDriver(url, options);
+            driver.get("https://www.google.com");
+            System. out.println("Title: " + driver.getTitle());
+            driver.quit();
+        } catch (MalformedURLException e) {
+            System. out.println("Invalid Selenium URL: " + e.getMessage());
+        } catch (Exception e) {
+            System. out.println("An error occurred: " + e.getMessage());  } }}
